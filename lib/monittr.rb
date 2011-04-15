@@ -163,7 +163,7 @@ module Monittr
         super( { :name          => value('name'                          ),
                  :status        => value('status',                  :to_i),
                  :monitored     => value('monitor',                 :to_i),
-                 :response_time => value('port/responsetime'             )
+                 :response_time => value('icmp/responsetime'             )
                } )
         rescue Exception => e
           puts "ERROR: #{e.class} -- #{e.message}, In: #{e.backtrace.first}"

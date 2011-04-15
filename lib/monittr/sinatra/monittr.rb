@@ -48,6 +48,12 @@ module Sinatra
         when 604800..2419200
           value = seconds/604800
           "#{value} week#{  value > 1 ? 's' : ''}"
+        when 2419200..31536000
+          value = seconds/2419200
+          "#{value} month#{  value > 1 ? 's' : ''}"
+        when 31536000..3153600000
+          value = seconds/31536000
+          "#{value} year#{  value > 1 ? 's' : ''}"
         else
           nil
         end
